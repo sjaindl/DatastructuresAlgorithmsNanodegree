@@ -1,0 +1,20 @@
+Explanation for Task 1 - LRU Cache:
+
+My LRU Cache solution was implemented with doubly linked nodes that are stored in a queue and dictionary:
+- Dictionary (cache_map): Has the given key and stores a node as value
+- Queue (lru_queue): Holds all elements that are currently in the cache (max 5). At the tail is the most recently used element.
+                     At the head is the least recently used element, that will be the next candidate to remove.
+
+The get-operation retrieves the node from the map (for valid not-None keys) and checks whether there's a cache hit or cache miss.
+In case of a cache hit, the node must be upgraded: It is put to the tail (upgrade_node).
+Map lookup is a constant operation --> O(1)
+
+upgrade_node takes a node from somewhere inside the queue and promotes it to the tail. This is actually an O(1) operation 
+as the node is referenced to by the cache_map and all node calls are also constant operations.
+
+The set-operation checks whether an element is present in the cache (this is again an O(1) operation - dict lookup).
+If present, the value is simply overridden. If the element isn't present it is inserted into queue and dict after removing
+the least recently used element when the cache is at capacity. Enqueue & dequeue operations as well as dict access and deletion are O(1) operations.
+
+All operations are performed in constant time, even in the worst case. This can be accomplished thanks to possibility to access
+elements somewhere in the queue through a dictionary. All other operations are constant by nature (enqueue, dequeue, dict deletion & lookup..).
