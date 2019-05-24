@@ -1,0 +1,20 @@
+Explanation for Task 3 - Huffman Coding:
+
+Encoding:
+The Huffman encoding first uses a dictionary to store frequencies of single characters in the input string. This needs time and
+space of O(n), since all characters need to be checked and dictionary insert and lookup can be done in O(1).
+
+Next, characters are sorted by frequency. This can easily be done with a priority queue as the min/max element is always on top
+of the queue. pq.get() takes therefore O(1) only time, the put operations takes O(log n) time, as a priority queue sorts internally.
+So, this a runtime of O(n log n), as a put operation is performed for each character once.
+
+Then, the tree is build starting from the root in codes_rec. This is a recursive function that stores char prefixes in another dictionary by traversing the tree.
+All elements are traversed once, so this has a time complexity of O(n). There may be a bit of overhead because of the recursive call stack.
+
+Finally, encoded data is build by looking up each character in the code dict. This is O(n).
+
+Total Time: O(n) + O(n log n) + O(n) + O(n) = O(n log n)!
+
+Decoding:
+All characters in the decoded data are iterated through and, when a leave is reached, decoded data is looked up by the custom class CharTuple, that represents the tree elements.
+This is a runtime of O(n).
