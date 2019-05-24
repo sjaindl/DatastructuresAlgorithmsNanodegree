@@ -1,0 +1,8 @@
+Explanation for Task 2 - File Recuresion:
+
+My file recursion solution is implemented relatively short with a recursive function that scans all subdirectories and
+appends/merges files with the given suffix to the result array (suffix_file_list).
+
+The time complexity is O(n), where n is the number of files/directories, as each file and directory must be checked once.
+The space complexity is O(m), where m is the number of files that match the given suffix. 
+Furthermore, as it is a recursive solution, the call stack also takes up space linear to the depth of subdirectories (= level of recursion).
