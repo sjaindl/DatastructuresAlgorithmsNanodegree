@@ -1,0 +1,14 @@
+Explanation for Task 6 - Linked List Union and Intersection:
+
+Union:
+The Union function needs a set and a Linked List. The set stores element values that already have been added to the Linked List, to prevent duplicates.
+The set takes up to O(n) space (if all elements are different in the input). 
+While iterating through the input linked list, new elements are added to the result Linked List. 
+The add operation is actually a prepend, that is performed in constant time O(1), as the order doesn't matter and it's faster than append (with append, we need to iterate through the whole list everytime, except we would also add a tail member).
+Altogether, the union_lists function iterates once through the input list per list. This is O(n) time complexity and O(n) space complexity (set + linked lists with O(n), respectively).
+
+Intersection:
+Quite similar to union, except that build_intersect_set builds a set with all elements contained in input list 1 with time (iteration through input) and space (set) complexity of O(n).
+The intersect_lists has another set already_inserted_elements. All elements of the second input list are iterated through and prepended to the output list,
+if the value isn't already inserted and presend in the first list (which is checked with the 2 sets).
+Altogether, intersection has O(n) time complexity and O(n) space complexity.
