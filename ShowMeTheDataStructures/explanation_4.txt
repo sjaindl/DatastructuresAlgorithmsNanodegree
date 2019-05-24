@@ -1,0 +1,9 @@
+Explanation for Task 4 - Active Directory:
+
+This simple recursive algorithm checks first the base case: Is the user in current group?
+If not, the check is done recursively for all subgroups and the result is returned.
+
+The runtime is O(m * n), where m is the number of users and n the number of groups. 
+In the worst case all groups and users have to be checked. There is also a call stack overhead due to the recursion.
+
+There are no additional data structures necessary.
