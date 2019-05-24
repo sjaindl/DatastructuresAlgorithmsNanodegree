@@ -1,7 +1,17 @@
 import sys
 from queue import PriorityQueue
 
-class   :
+class CharTuple:
+    def __init__(self, frequency, char):
+        self.frequency = frequency
+        self.char = char
+        self.left = None
+        self.right = None
+
+    def __lt__(self, other):
+        return self.frequency < other.frequency
+
+class HuffmanCoding:
     def __init__(self, frequency, char, left = None, right = None):
         self.frequency = frequency
         self.char = char

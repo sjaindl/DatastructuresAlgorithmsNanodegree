@@ -1,0 +1,11 @@
+Explanation for Task 5 - Blockchain:
+
+The Blockchain solution has 3 classes:
+- Node: Containing a block, linking to previous node
+- Block: Containing data, timestamp a hash and hash of previous block
+    --> The calc_hash function called in the constructor which probably takes O(n) time, as each char of the input must be considered in the hash function.
+- BlockChain: The blockchain holds a single linked list with tail and head. 
+    --> The add_block method creates a block and puts it in the linked list. The method itself has only constant O(1) time operations, except
+        calling the block constructor, which calculates a hash.
+
+Altogether, space (linked list) and time complexity are O(n). Time complexity depends on the hash function.
