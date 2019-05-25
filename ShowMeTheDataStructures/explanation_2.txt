@@ -1,4 +1,4 @@
-Explanation for Task 2 - File Recuresion:
+Explanation for Task 2 - File Recursion:
 
 My file recursion solution is implemented relatively short with a recursive function that scans all subdirectories and
 appends/merges files with the given suffix to the result array (suffix_file_list).

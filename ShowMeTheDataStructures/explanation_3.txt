@@ -5,7 +5,7 @@ The Huffman encoding first uses a dictionary to store frequencies of single char
 space of O(n), since all characters need to be checked and dictionary insert and lookup can be done in O(1).
 
 Next, characters are sorted by frequency. This can easily be done with a priority queue as the min/max element is always on top
-of the queue. pq.get() takes therefore O(1) only time, the put operations takes O(log n) time, as a priority queue sorts internally.
+of the queue. pq.get() takes therefore O(1) only time, the put operations takes n times O(log n) time, as a priority queue sorts internally.
 So, this a runtime of O(n log n), as a put operation is performed for each character once.
 
 Then, the tree is build starting from the root in codes_rec. This is a recursive function that stores char prefixes in another dictionary by traversing the tree.

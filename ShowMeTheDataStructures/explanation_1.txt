@@ -18,3 +18,5 @@ the least recently used element when the cache is at capacity. Enqueue & dequeue
 
 All operations are performed in constant time, even in the worst case. This can be accomplished thanks to possibility to access
 elements somewhere in the queue through a dictionary. All other operations are constant by nature (enqueue, dequeue, dict deletion & lookup..).
+
+Altogether, the overall time complexity is O(1). Space complexity is O(n) for the cache map and LRU Queue, respectively.

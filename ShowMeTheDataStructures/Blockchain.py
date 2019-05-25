@@ -56,7 +56,7 @@ chain.add_block("more data")
 assert chain.tail != chain.head, "There should be two blocks in the chain - head and tail"
 assert chain.tail.block.previous_hash != None, "The block should have a previous hash"
 second_block_hash = chain.tail.block.hash
-second_block_prev_hash = chain.tail.block.hash
+second_block_prev_hash = chain.tail.block.previous_hash
 assert first_block_hash == second_block_prev_hash, "The second block previous hash should correspond to first block's hash"
 assert second_block_hash != second_block_prev_hash, "Hash and previous hash should be different"
 
