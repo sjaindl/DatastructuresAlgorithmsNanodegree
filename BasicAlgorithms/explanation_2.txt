@@ -1,0 +1,8 @@
+Explanation for Task 2 - Search in a Rotated Sorted Array:
+
+The implementation uses a recusive function to search in the rotated sorted array in a modified binary search style.
+On each recursion the array range is divided into half. This means the runtime is O(log n) for the recursive calls. The other checks and array accesses are constant.
+The algorithm checks whether the array is rotated from min to center, and based on that it checks whether the number should be searched further in the left or right remainig half of the array.
+
+So, altogether the algorithm has O(log n) runtime.
+There are no additional data structures used. So, the space complexity is O(1).

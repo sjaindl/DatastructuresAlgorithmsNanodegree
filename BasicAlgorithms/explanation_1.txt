@@ -1,0 +1,8 @@
+Explanation for Task 1 - Square Root of an Integer:
+
+The implementation uses bit operations to calculate the square root iteratively.
+The base case is when the number is < 2, where just the number is returned. 
+It calculates a smaller number, which basically is the number divided by 4 and truncated on each shift (double right shift). This returns the square root of this number, which is then multiplied by 2 (to get an even number). 
+Either the smaller or larger number (smaller number + 1), depending on the number, is returned.
+So each time the algorithm recurses, the number is divided in half. This is a classical O(log n) runtime for the recursion. Besides the recursion, the function only performs constant operations. This means the overall runtime is O(log n).
+There are also no additional data structures used. So, the space complexity is O(1).
