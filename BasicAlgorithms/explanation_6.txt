@@ -1,0 +1,4 @@
+Explanation for Task 5 - Unsorted Integer Array:
+
+The get_min_max function returns the min and max element by keeping track of min and max variables, during iterating once through the array.
+With only 1 iteration the time complexity is O(n) and the space complexity is O(1) with 2 variables.
