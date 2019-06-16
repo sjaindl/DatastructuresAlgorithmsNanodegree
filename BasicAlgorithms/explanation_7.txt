@@ -1,0 +1,9 @@
+Explanation for Task 7 - HTTP Routing Trie:
+
+The implementation uses a Router, RouteTrie and RouteTrieNode class to insert and find paths.
+The RouteTrieNode is a tree data structure that stores website paths along the way. It is responsible for inserting subpaths in the tree and store handlers at the leave nodes.
+The RouteTrie holds a reference to the root RouteTrieNode and is responsible for inserting and finding elements. 
+This means, the space complexity is O(p), where p is the number of paths.
+
+The insert function (called by add_handler) recurses through each path (created by split_path) and creates trie sub nodes on the way, as necessary. On the leave node the handler is set. This takes O(n) time and O(n) space complexity for the recursive path function parameter.
+The find function (called by lookup), similar to the insert function, recurses through the path list and checks whether each a sub path exists. This is done in max O(n) time (when the path exists) and O(n) space complexity for the recursive path function parameter.
