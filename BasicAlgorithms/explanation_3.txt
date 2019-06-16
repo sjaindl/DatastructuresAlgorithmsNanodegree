@@ -1,0 +1,8 @@
+Explanation for Task 3 - Rearrange Array Elements:
+
+The implementation first inserts all elements in a min priority queue. This means the smallest element always can be retrieved.
+Then, the goal is to put the smallest digits on the smallest unit positions and the largest digits on the highest unit positions. 
+So, next the elements are removed from the queue and added to the left and right number. 
+
+Time complexity: O(n log n) for inserting all elements in the priority queue + O(n log n) for removing all elements from the priority queue again. Total: O(n log n).
+Space complexity: O(n) for the priority queue, containing n elements.
