@@ -1,0 +1,12 @@
+Explanation for Task 5 - Trie Autocomplete:
+
+The implementation uses a TrieNode and Trie class.
+The TrieNode is a tree data structure that stores at max n inserted chars (if there are no words with same prefixes). It is responsible for inserting words in the tree and determining suffixes of a given word (for autocompletion).
+The Trie itself just holds a reference to the root TrieNode and is responsible for inserting and finding elements.
+This means, the space complexity is O(n).
+
+The insert function loops through each character in the word and creates trie sub nodes on the way, as necessary. On the final char the is_word property is set to true. This takes O(n) time and O(1) space complexity.
+The find function, similar to the insert function, loops through each character in the word and checks whether such a path exists. This is done in max O(n) time (when the word exists) and O(1) space complexity.
+Finally, the suffixes function first checks whether a path to the given suffix exists, iteratively. 
+If it exists, the recursive function suffixes_rec appends all found suffixes to words in suffixes_list.
+The list has a space complexity of O(w), where w is the total number of words. The time complexity is O(n), as each char is checked at max once.
