@@ -1,0 +1,6 @@
+Explanation for Task 4 - Dutch National Flag Problem:
+
+The solution uses 3 pointers to perform this task in a single traversal in O(n) time. 
+The left_ptr keeps track of the rightmost known 0 position, the center_ptr is the current position within the array
+and right_ptr is leftmost known 2 position. While traversing the list, these 3 pointers are updated and array elements are
+exchanged accordingly. As no additional data structures are used, the space complexity is O(1).
